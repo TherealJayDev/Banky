@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banky</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2c88f01715.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Kumbh+Sans:wght@100..900&family=Kurale&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Kumbh+Sans:wght@100..900&family=Kurale&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- user details and input -->
+    <header>
+        <div class="user">
+            <i class="fa-regular fa-user"></i>
+            <p class="label_user">Welcome</p>
+        </div>
+        <form action="submit">
+            <input type="text" placeholder="name" class="input_username">
+            <input type="number" placeholder="pin" class="input_pin">
+           <button class="input_btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+    </header>
+    
+    <!-- main content -->
+    <main>
+        <!-- balance section -->
+        <section class="balance">
+            <div class="ava">
+                <p class="ava_p">Available Balance <i class="fa-regular fa-eye" id="eye-open"></i><i class="fa-regular fa-eye-slash" id="eye-closed"></i></p>
+                <span class="label_balance">$0.00</span>
+            </div>
+            <div class="trans">
+                <p class="tra_">Transaction History <span class="caret">></span><span class="carets"><</span></p>
+                <a href="#"><P class="bor_">+ Borrow Money</P></a>
+            </div>
+        </section>
+
+        <section class="details">
+            <p>Deposit <span class="deposit">
+            </span></p>
+            <p>Withdrawal <span class="withdrawal"></span></p>
+        </section>
+
+        <section class="transactions">
+          
+        </section>
+
+        <!-- banking functions -->
+        <section class="functions">
+            <div class="same">
+                <i id="same" class="fa-solid fa-id-badge"></i>
+                <p>To Banky</p>
+            </div>
+            <div class="other">
+                <i id="others" class="fa-solid fa-building-columns"></i>
+                <p>To Others</p>
+            </div>
+            <div class="withdraw">
+                <i id="withdraw" class="fa-solid fa-money-bill-transfer"></i>
+                <p>Withdraw</p>
+            </div>
+        </section>
+
+        <!-- to same account -->
+        <div class="same-popup">
+        <div class="send">
+        <input type="text" id="receiver-input" placeholder="Account">
+        <input type="text" id="amount_input" placeholder="Amount">
+        <button type="submit" class="send-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div> 
+        <p id="text">Beneficiaries</p>
+
+        <div class="beneficiaries">
+            <div class="heading">
+            <h2>Recents</h2>
+            </div>        
+            <div class="receiver">
+                <div class="flex">
+                <i id="user" class="fa-solid fa-user"></i>
+                <div class="account-details">
+                    <h2 class="account-name">Jackson Joshua</h2>
+                    <p class="account-number">08149721663</p>
+                </div>
+                </div>
+            <div class="receiver">
+                <div class="flex">
+                <i id="user" class="fa-solid fa-user"></i>
+                <div class="account-details">
+                    <h2 class="account-name">Roland Joshua</h2>
+                    <p class="account-number">08124879938</p>
+                </div>
+                </div>
+                <div class="flex">
+                <i id="user" class="fa-solid fa-user"></i>
+                <div class="account-details">
+                    <h2 class="account-name">Arike Olayinka</h2>
+                    <p class="account-number">08148492901</p>
+                </div>
+                </div>
+                <div class="flex">
+                <i id="user" class="fa-solid fa-user"></i>
+                <div class="account-details">
+                    <h2 class="account-name">Williams Anastatia</h2>
+                    <p class="account-number">07060788057</p>
+                </div>
+                </div>
+            </div>    
+        </div>
+        </div>
+
+        <!-- other features -->
+        <section class="other-features">
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-walkie-talkie"></i>
+                <p>Airtime</p>
+            </div>
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-database"></i>
+                <p>Data</p>
+            </div>
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-futbol"></i>
+                <p>Betting</p>
+            </div>
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-tv"></i>
+                <p>TV</p>
+            </div>
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-piggy-bank"></i>
+                <p>OWealth</p>
+            </div>
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-landmark-dome"></i>
+                <p>Loan</p>
+            </div>
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-heart"></i>
+                <p>Play4aChild</p>
+            </div>
+            <div class="feats">
+                <i id="feats" class="fa-solid fa-circle-info"></i>
+                <p>More</p>
+            </div>
+        </section>
+
+        <!-- sides -->
+        <section class="sides">
+            <div class="flex2">
+                <i id="side" class="fa-solid fa-bell"></i>
+                <div>
+                    <h2>Cash up for grabs!</h2>
+                    <p>Invite friends and earn up to $400 Cash</p>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="foot">
+                <i id="foot" class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </div>
+        <div class="foot">
+                <i id="foot" class="fa-solid fa-gift"></i>
+                <p>Rewards</p>
+            </div>
+        <div class="foot">
+                <i id="foot" class="fa-solid fa-coins"></i>
+                <p>Finance</p>
+            </div>
+        <div class="foot">
+                <i id="foot" class="fa-solid fa-credit-card"></i>
+                <p>Cards</p>
+            </div>
+        <div class="foot">
+                <i id="foot" class="fa-regular fa-user"></i>
+                <p>Me</p>
+            </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
